@@ -28,6 +28,11 @@
 -keep,allowobfuscation @interface com.facebook.proguard.annotations.KeepGettersAndSetters
 -keep,allowobfuscation @interface com.facebook.common.internal.DoNotStrip
 
+# 微信支付
+-keep class com.tencent.mm.sdk.** {
+  *;
+}
+
 # Do not strip any method/class that is annotated with @DoNotStrip
 -keep @com.facebook.proguard.annotations.DoNotStrip class *
 -keep @com.facebook.common.internal.DoNotStrip class *
